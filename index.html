@@ -197,6 +197,96 @@ footer {
     padding: 8px 20px;
     border-radius: 999px;
 }
+/* ================== UBICACION ================== */
+.ubicacion {
+    padding: 90px 20px;
+    background: #FFF8DC;
+}
+
+.ubicacion-contenido {
+    max-width: 1200px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    align-items: center;
+}
+
+.ubicacion-texto {
+    background: white;
+    padding: 50px;
+    border-radius: 25px;
+    box-shadow: 0 10px 25px rgba(0,0,0,.1);
+}
+
+.ubicacion-texto h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.4rem;
+    margin-bottom: 20px;
+}
+
+.ubicacion-texto p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+.ubicacion-mapa iframe {
+    width: 100%;
+    height: 350px;
+    border: none;
+    border-radius: 25px;
+    box-shadow: 0 10px 25px rgba(0,0,0,.15);
+}
+/* ================== CONTACTO ================== */
+.contacto {
+    padding: 100px 20px;
+    background: linear-gradient(135deg,#CD853F,#8B4513);
+    color: white;
+}
+
+.contacto-contenido {
+    max-width: 1200px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    align-items: center;
+}
+
+.contacto-texto h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.6rem;
+    margin-bottom: 20px;
+}
+
+.contacto-texto p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+.btn-whatsapp {
+    display: inline-block;
+    background: #25D366;
+    color: white;
+    padding: 14px 30px;
+    border-radius: 999px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: transform .3s, box-shadow .3s;
+}
+
+.btn-whatsapp:hover {
+    transform: scale(1.08);
+    box-shadow: 0 10px 25px rgba(0,0,0,.3);
+}
+
+.contacto-imagen img {
+    width: 260px;
+    max-width: 80%;
+    display: block;
+    margin: auto;
+}
+
 </style>
 </head>
 
@@ -245,8 +335,51 @@ footer {
                 </div>
             </div>
         </div>
+    </div>
+</section>
+<!-- UBICACION -->
+<section class="ubicacion">
+    <div class="ubicacion-contenido">
 
-        
+        <div class="ubicacion-texto">
+            <h2>¿Dónde nos ubicamos?</h2>
+            <p>
+                El rincón del Osito Ky está ubicado en el corazón de la ciudad,
+                horneando galletas artesanales todos los días con mucho amor 🧸🍪.
+            </p>
+            <p>
+                📍 Ven a visitarnos o pide para llevar.
+            </p>
+        </div>
+
+        <div class="ubicacion-mapa">
+            <iframe 
+                src="https://www.google.com/maps?q=Mexico&output=embed"
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+        </div>
+
+    </div>
+</section>
+<!-- CONTACTO -->
+<section class="contacto">
+    <div class="contacto-contenido">
+
+        <div class="contacto-texto">
+            <h2>¿Deseas ordenar?</h2>
+            <p>
+                Contáctanos y haz tu pedido fácilmente.
+                Estamos listos para endulzar tu día 🍪💚
+            </p>
+            <a href="https://wa.me/5210000000000" target="_blank" class="btn-whatsapp">
+                Escríbenos por WhatsApp
+            </a>
+        </div>
+
+        <div class="contacto-imagen">
+            <img src="img/whatsapp-logo.png" alt="WhatsApp Kybear Cookies">
+        </div>
 
     </div>
 </section>
