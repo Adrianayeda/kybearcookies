@@ -5,7 +5,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Kybear Cookies – El Rincón del Osito Ky</title>
-
 <style>
 /* ================== RESET ================== */
 * {
@@ -23,11 +22,17 @@ body {
 
 /* ================== HERO ================== */
 .hero-section {
+    position: relative;
+
     min-height: 100svh;
     min-height: 100vh;
-    width: 100vw;          /* 🔥 CLAVE */
-    margin: 0;
-    padding: 0;
+
+    width: 100%;
+    max-width: none;
+
+    /* 🔥 ESTO ROMPE EL CONTENEDOR Y ELIMINA BORDES */
+    margin-left: calc(50% - 50vw);
+    margin-right: calc(50% - 50vw);
 
     display: flex;
     align-items: center;
@@ -42,7 +47,6 @@ body {
     background-position: center;
     background-repeat: no-repeat;
 }
-
 
 /* ================== HERO CONTENT ================== */
 .hero-content {
@@ -69,10 +73,10 @@ body {
 .hero-logo {
     position: relative;
     width: 100%;
-    max-width: 420px;   /* móvil / tablet */
+    max-width: 420px;
     margin: auto;
+    transition: transform .4s ease;
 }
-
 
 .hero-logo.shrink {
     transform: scale(0.78);
@@ -371,9 +375,9 @@ footer {
 }
 /* ================== PAGE WRAPPER ================== */
 .page-wrapper {
-    max-width: 1400px;   /* PC */
+    max-width: 1100px;   /* PC */
     margin: 0 auto;
-    padding: 0 10px;
+    padding: 0 20px;
 }
 
 /* Tablet */
@@ -388,7 +392,7 @@ footer {
 @media (max-width: 480px) {
     .page-wrapper {
         max-width: 380px;   /* 👈 clave */
-        padding: 0 10px;
+        padding: 0 14px;
     }
 }
 .map-section,
@@ -409,20 +413,19 @@ footer {
     }
 }
 @media (min-width: 1400px) {
-    .hero-logo {
-        max-width: 1400px;
-    }
-
     .hero-logo .osito {
-        width: 320px;
-        top: -140px;
+        width: 300px;
     }
 
-    .hero-logo .hero-texto {
-        max-width: 480px;
+    .hero-texto {
+        width: 420px;
     }
 }
 
+html, body {
+    width: 100%;
+    overflow-x: hidden;
+}
 
 </style>
 </head>
