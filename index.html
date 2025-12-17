@@ -60,10 +60,10 @@ body {
 .hero-logo {
     position: relative;
     width: 100%;
-    max-width: 420px;
+    max-width: 420px;   /* móvil / tablet */
     margin: auto;
-    transition: transform .4s ease;
 }
+
 
 .hero-logo.shrink {
     transform: scale(0.78);
@@ -400,12 +400,33 @@ footer {
     }
 }
 @media (min-width: 1400px) {
-    .hero-logo .osito {
-        width: 300px;
+    .hero-logo {
+        max-width: 720px;
     }
 
-    .hero-texto {
-        width: 420px;
+    .hero-logo .osito {
+        width: 320px;
+        top: -140px;
+    }
+
+    .hero-logo .hero-texto {
+        max-width: 480px;
+    }
+}
+
+/* ================== HERO DESKTOP ================== */
+@media (min-width: 1024px) {
+    .hero-logo {
+        max-width: 600px;   /* 👈 aquí estaba el problema */
+    }
+
+    .hero-logo .osito {
+        width: 280px;
+        top: -120px;
+    }
+
+    .hero-logo .hero-texto {
+        max-width: 420px;
     }
 }
 
