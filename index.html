@@ -237,7 +237,7 @@ footer {
     border-radius: 25px;
     box-shadow: 0 10px 25px rgba(0,0,0,.15);
 }
-/* ================== CONTACTO ================== */
+/* ================== CONTACTO (IMAGEN IZQ / TEXTO DER) ================== */
 .contacto {
     padding: 100px 20px;
     background: linear-gradient(135deg,#CD853F,#8B4513);
@@ -251,6 +251,13 @@ footer {
     grid-template-columns: 1fr 1fr;
     gap: 50px;
     align-items: center;
+}
+
+.contacto-imagen img {
+    width: 260px;
+    max-width: 80%;
+    display: block;
+    margin: auto;
 }
 
 .contacto-texto h2 {
@@ -280,12 +287,6 @@ footer {
     box-shadow: 0 10px 25px rgba(0,0,0,.3);
 }
 
-.contacto-imagen img {
-    width: 260px;
-    max-width: 80%;
-    display: block;
-    margin: auto;
-}
 
 </style>
 </head>
@@ -366,6 +367,10 @@ footer {
 <section class="contacto">
     <div class="contacto-contenido">
 
+        <div class="contacto-imagen">
+            <img src="img/whatsapp-logo.png" alt="WhatsApp Kybear Cookies">
+        </div>
+
         <div class="contacto-texto">
             <h2>¿Deseas ordenar?</h2>
             <p>
@@ -377,12 +382,9 @@ footer {
             </a>
         </div>
 
-        <div class="contacto-imagen">
-            <img src="img/whatsapp-logo.png" alt="WhatsApp Kybear Cookies">
-        </div>
-
     </div>
 </section>
+
 
 <!-- CTA -->
 <section class="cta">
