@@ -199,21 +199,36 @@ footer {
 
 /* ================== RESPONSIVE ================== */
 @media (max-width: 768px) {
-    .hero-logo .osito {
+
+    .osito {
+        position: relative;
         width: 170px;
-        top: -90px;
+        top: 0;
+        margin-bottom: 10px;
+        animation: none;
     }
+
+    .hero-texto {
+        width: 80%;
+        max-width: 260px;
+    }
+
     .hero-content p {
         font-size: 1.1rem;
     }
 }
 
 @media (max-width: 480px) {
-    .hero-logo .osito {
+
+    .osito {
         width: 140px;
-        top: -70px;
+    }
+
+    .hero-texto {
+        width: 90%;
     }
 }
+
 </style>
 </head>
 
