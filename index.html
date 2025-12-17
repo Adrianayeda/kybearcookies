@@ -197,6 +197,37 @@ footer {
     border-radius: 999px;
 }
 
+/* ================== RESPONSIVE ================== */
+@media (max-width: 768px) {
+
+    .osito {
+        position: relative;
+        width: 170px;
+        top: 0;
+        margin-bottom: 10px;
+        animation: none;
+    }
+
+    .hero-texto {
+        width: 80%;
+        max-width: 260px;
+    }
+
+    .hero-content p {
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .osito {
+        width: 140px;
+    }
+
+    .hero-texto {
+        width: 90%;
+    }
+}
 
 </style>
 </head>
@@ -208,8 +239,8 @@ footer {
     <div class="hero-content">
 
         <div class="hero-logo" id="heroLogo">
-            <img src="/img/osito.png" class="osito" alt="Osito Ky">
-            <img src="/img/montminycookies.png" class="hero-texto" alt="Montminy Cookies">
+            <img src="img/osito.png" class="osito" alt="Osito Ky">
+            <img src="img/montminycookies.png" class="hero-texto" alt="Montminy Cookies">
             <button onclick="document.getElementById('menu').scrollIntoView({behavior:'smooth'})">
             Ver menú
         </button>
