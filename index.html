@@ -360,13 +360,39 @@ footer {
         padding: 35px;
     }
 }
+/* ================== PAGE WRAPPER ================== */
+.page-wrapper {
+    max-width: 1100px;   /* PC */
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Tablet */
+@media (max-width: 768px) {
+    .page-wrapper {
+        max-width: 600px;
+        padding: 0 16px;
+    }
+}
+
+/* Celular */
+@media (max-width: 480px) {
+    .page-wrapper {
+        max-width: 380px;   /* 👈 clave */
+        padding: 0 14px;
+    }
+}
+.map-section,
+.contact-section {
+    margin: 40px auto;
+}
 
 
 </style>
 </head>
 
 <body>
-
+<div class="page-wrapper">
 <!-- HERO -->
 <section class="hero-section">
     <div class="hero-content">
@@ -483,6 +509,6 @@ window.addEventListener('scroll', () => {
     }
 });
 </script>
-
+</div>
 </body>
 </html>
