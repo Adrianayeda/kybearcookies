@@ -365,6 +365,44 @@ html, body {
     width: 100%;
     overflow-x: hidden;
 }
+/* carrusel*/
+    .preview {
+    background: #FFF8DC;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.preview-title {
+    font-size: 2.4rem;
+    margin-bottom: 40px;
+    color: #2C1810;
+    font-family: 'Playfair Display', serif;
+}
+
+/* === CARRUSEL === */
+.carousel {
+    width: 100%;
+    overflow: hidden;
+}
+
+.carousel-track {
+    display: flex;
+    gap: 20px;
+    animation: scroll 25s linear infinite;
+}
+
+.carousel-track img {
+    width: 220px;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 20px;
+    box-shadow: 0 8px 20px rgba(0,0,0,.15);
+}
+
+@keyframes scroll {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+}
 
 </style>
 </head>
@@ -435,6 +473,36 @@ html, body {
         </div>
     </div>
 </section>
+<!-- Carrusel -->
+    <section class="preview">
+    <h2 class="preview-title">Vista previa de nuestros productos</h2>
+
+    <div class="carousel">
+        <div class="carousel-track" id="carouselTrack"></div>
+    </div>
+</section>
+<script>
+const images = [
+  "img/carrusel/img (1).jpg",
+  "img/carrusel/img (2).jpg",
+  "img/carrusel/img (3).jpg",
+  "img/carrusel/img (4).jpg",
+  "img/carrusel/img (5).jpg",
+  "img/carrusel/img (6).jpg",
+  "img/carrusel/img (7).jpg"
+];
+
+const track = document.getElementById("carouselTrack");
+
+// Duplicar para efecto infinito
+images.concat(images).forEach(src => {
+  const img = document.createElement("img");
+  img.src = src;
+  img.alt = "Productos Kybear Cookies";
+  track.appendChild(img);
+});
+</script>
+
 <!-- UBICACION -->
 <section class="ubicacion">
     <div class="ubicacion-contenido">
